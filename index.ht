@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>NoomiClone Player List</title>
+        <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+
+        <header class="navbar">
+          <div class="logo">
+              <span class="logo-icon">N</span>
+                  <span>NOOMICLONE</span>
+                    </div>
+
+                      <nav>
+                          <a class="active" href="#rankings">Rankings</a>
+                              <a href="#records">Records</a>
+                                  <a href="#about">About</a>
+                                    </nav>
+
+                                      <div class="nav-status">
+                                          <span class="status-dot"></span>
+                                              COMMUNITY LIST
+                                                </div>
+                                                </header>
+
+                                                <main class="container">
+
+                                                  <section class="hero">
+                                                      <div class="hero-text">
+                                                            <div class="eyebrow">GEOMETRY DASH COMMUNITY</div>
+                                                                  <h1>PLAYER <span>RANKINGS</span></h1>
+                                                                        <p>Track the best players in the NoomiClone community.</p>
+                                                                            </div>
+
+                                                                                <div class="hero-card">
+                                                                                      <div class="hero-card-label">LIST STATUS</div>
+                                                                                            <div class="hero-card-value">COMMUNITY</div>
+                                                                                                  <div class="hero-card-sub">Unofficial player leaderboard</div>
+                                                                                                      </div>
+                                                                                                        </section>
+
+                                                                                                          <section class="podium" id="podium"></section>
+
+                                                                                                            <section id="rankings" class="section">
+                                                                                                                <div class="section-heading">
+                                                                                                                      <div>
+                                                                                                                              <div class="eyebrow">GLOBAL STATISTICS</div>
+                                                                                                                                      <h2>Leaderboard</h2>
+                                                                                                                                            </div>
+                                                                                                                                                  <div class="player-total" id="playerTotal"></div>
+                                                                                                                                                      </div>
+
+                                                                                                                                                          <div class="toolbar">
+                                                                                                                                                                <input id="search" type="search"
+                                                                                                                                                                        placeholder="Search player..."
+                                                                                                                                                                                autocomplete="off">
+
+                                                                                                                                                                                      <select id="sort">
+                                                                                                                                                                                              <option value="points">Highest points</option>
+                                                                                                                                                                                                      <option value="name">Alphabetical</option>
+                                                                                                                                                                                                            </select>
+                                                                                                                                                                                                                </div>
+
+                                                                                                                                                                                                                    <div class="table-wrap">
+                                                                                                                                                                                                                          <table>
+                                                                                                                                                                                                                                  <thead>
+                                                                                                                                                                                                                                            <tr>
+                                                                                                                                                                                                                                                        <th>#</th>
+                                                                                                                                                                                                                                                                    <th>PLAYER</th>
+                                                                                                                                                                                                                                                                                <th>POINTS</th>
+                                                                                                                                                                                                                                                                                            <th>HARDEST</th>
+                                                                                                                                                                                                                                                                                                        <th>RECORDS</th>
+                                                                                                                                                                                                                                                                                                                  </tr>
+                                                                                                                                                                                                                                                                                                                          </thead>
+                                                                                                                                                                                                                                                                                                                                  <tbody id="playerTable"></tbody>
+                                                                                                                                                                                                                                                                                                                                        </table>
+                                                                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                                                                              </section>
+
+                                                                                                                                                                                                                                                                                                                                                <section id="records" class="section">
+                                                                                                                                                                                                                                                                                                                                                    <div class="section-heading">
+                                                                                                                                                                                                                                                                                                                                                          <div>
+                                                                                                                                                                                                                                                                                                                                                                  <div class="eyebrow">LATEST ACHIEVEMENTS</div>
+                                                                                                                                                                                                                                                                                                                                                                          <h2>Recent Records</h2>
+                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                                    </div>
+
+                                                                                                                                                                                                                                                                                                                                                                                        <div class="records-list" id="recordsList"></div>
+                                                                                                                                                                                                                                                                                                                                                                                          </section>
+
+                                                                                                                                                                                                                                                                                                                                                                                            <section id="about" class="section about">
+                                                                                                                                                                                                                                                                                                                                                                                                <div class="eyebrow">ABOUT THE PROJECT</div>
+                                                                                                                                                                                                                                                                                                                                                                                                    <h2>NoomiClone</h2>
+                                                                                                                                                                                                                                                                                                                                                                                                        <p>
+                                                                                                                                                                                                                                                                                                                                                                                                              An unofficial Geometry Dash community player ranking.
+                                                                                                                                                                                                                                                                                                                                                                                                                    This project is independently created and is not affiliated
+                                                                                                                                                                                                                                                                                                                                                                                                                          with RobTop Games.
+                                                                                                                                                                                                                                                                                                                                                                                                                              </p>
+                                                                                                                                                                                                                                                                                                                                                                                                                                </section>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                </main>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                <footer>
+                                                                                                                                                                                                                                                                                                                                                                                                                                  <span>NOOMICLONE PLAYER LIST</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                    <span>COMMUNITY PROJECT · 2026</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                    </footer>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                    <div class="modal" id="modal">
+                                                                                                                                                                                                                                                                                                                                                                                                                                      <div class="modal-content">
+                                                                                                                                                                                                                                                                                                                                                                                                                                          <button id="closeModal" class="close-btn">&times;</button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                              <div id="profileContent"></div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                <script src="script.js"></script>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                </body>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                </html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                            
