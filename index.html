@@ -1,121 +1,255 @@
-<!DOCTYPE html>
+<!DOCTYPE html>                                                                                                                                                                                                                                     <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>NoomiClone Player List</title>
-        <link rel="stylesheet" href="style.css">
-        </head>
-        <body>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global NoomiPlayer List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <header class="navbar">
-          <div class="logo">
-              <span class="logo-icon">N</span>
-                  <span>NOOMICLONE</span>
-                    </div>
+<header class="topbar">
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
-                      <nav>
-                          <a class="active" href="#rankings">Rankings</a>
-                              <a href="#records">Records</a>
-                                  <a href="#about">About</a>
-                                    </nav>
+  <div class="logo">
+    <span class="logo-icon">N</span>
+    <span>GLOBAL NOOMIPLAYER LIST</span>
+  </div>
 
-                                      <div class="nav-status">
-                                          <span class="status-dot"></span>
-                                              COMMUNITY LIST
-                                                </div>
-                                                </header>
+  <button class="account-btn" id="accountBtn">Sign in</button>
+</header>
 
-                                                <main class="container">
+<!-- MAIN HOME -->
+<main id="homePage" class="home-page">
 
-                                                  <section class="hero">
-                                                      <div class="hero-text">
-                                                            <div class="eyebrow">NOOMICLONE COMMUNITY</div>
-                                                                  <h1>PLAYER <span>RANKINGS</span></h1>
-                                                                        <p>Track the best players in the NoomiClone community.</p>
-                                                                            </div>
+  <section class="home-hero">
+    <div class="hero-label">COMMUNITY RANKING</div>
 
-                                                                                <div class="hero-card">
-                                                                                      <div class="hero-card-label">LIST STATUS</div>
-                                                                                            <div class="hero-card-value">COMMUNITY</div>
-                                                                                                  <div class="hero-card-sub">Unofficial player leaderboard</div>
-                                                                                                      </div>
-                                                                                                        </section>
+    <h1>GLOBAL<br>
+      <span>NOOMIPLAYER LIST</span>
+    </h1>
 
-                                                                                                          <section class="podium" id="podium"></section>
+    <p>
+      Explore the rankings and discover the players
+      and elements of the NoomiPlayer community.
+    </p>
 
-                                                                                                            <section id="rankings" class="section">
-                                                                                                                <div class="section-heading">
-                                                                                                                      <div>
-                                                                                                                              <div class="eyebrow">GLOBAL STATISTICS</div>
-                                                                                                                                      <h2>Leaderboard</h2>
-                                                                                                                                            </div>
-                                                                                                                                                  <div class="player-total" id="playerTotal"></div>
-                                                                                                                                                      </div>
+    <div class="home-buttons">
+      <button id="exploreBtn" class="primary-btn">
+        Explore the list
+      </button>
 
-                                                                                                                                                          <div class="toolbar">
-                                                                                                                                                                <input id="search" type="search"
-                                                                                                                                                                        placeholder="Search player..."
-                                                                                                                                                                                autocomplete="off">
+      <button id="submitRecordBtn" class="secondary-btn">
+        Submit a record
+      </button>
+    </div>
+  </section>
 
-                                                                                                                                                                                      <select id="sort">
-                                                                                                                                                                                              <option value="points">Highest points</option>
-                                                                                                                                                                                                      <option value="name">Alphabetical</option>
-                                                                                                                                                                                                            </select>
-                                                                                                                                                                                                                </div>
+  <section class="home-info">
+    <div class="info-card">
+      <span class="info-label">LIST</span>
+      <h2>Player & Elements</h2>
+      <p>Explore rankings and community achievements.</p>
+    </div>
 
-                                                                                                                                                                                                                    <div class="table-wrap">
-                                                                                                                                                                                                                          <table>
-                                                                                                                                                                                                                                  <thead>
-                                                                                                                                                                                                                                            <tr>
-                                                                                                                                                                                                                                                        <th>#</th>
-                                                                                                                                                                                                                                                                    <th>PLAYER</th>
-                                                                                                                                                                                                                                                                                <th>POINTS</th>
-                                                                                                                                                                                                                                                                                            <th>HARDEST</th>
-                                                                                                                                                                                                                                                                                                        <th>RECORDS</th>
-                                                                                                                                                                                                                                                                                                                  </tr>
-                                                                                                                                                                                                                                                                                                                          </thead>
-                                                                                                                                                                                                                                                                                                                                  <tbody id="playerTable"></tbody>
-                                                                                                                                                                                                                                                                                                                                        </table>
-                                                                                                                                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                                                                                                                                              </section>
+    <div class="info-card">
+      <span class="info-label">COMMUNITY</span>
+      <h2>Global NoomiPlayer</h2>
+      <p>An independent community ranking project.</p>
+    </div>
+  </section>
 
-                                                                                                                                                                                                                                                                                                                                                <section id="records" class="section">
-                                                                                                                                                                                                                                                                                                                                                    <div class="section-heading">
-                                                                                                                                                                                                                                                                                                                                                          <div>
-                                                                                                                                                                                                                                                                                                                                                                  <div class="eyebrow">LATEST ACHIEVEMENTS</div>
-                                                                                                                                                                                                                                                                                                                                                                          <h2>Recent Records</h2>
-                                                                                                                                                                                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                                                                                                                                                                                    </div>
+</main>
 
-                                                                                                                                                                                                                                                                                                                                                                                        <div class="records-list" id="recordsList"></div>
-                                                                                                                                                                                                                                                                                                                                                                                          </section>
+<!-- LIST PAGE -->
+<main id="listPage" class="list-page hidden">
 
-                                                                                                                                                                                                                                                                                                                                                                                            <section id="about" class="section about">
-                                                                                                                                                                                                                                                                                                                                                                                                <div class="eyebrow">ABOUT THE PROJECT</div>
-                                                                                                                                                                                                                                                                                                                                                                                                    <h2>NoomiClone</h2>
-                                                                                                                                                                                                                                                                                                                                                                                                        <p>
-                                                                                                                                                                                                                                                                                                                                                                                                              An unofficial Geometry Dash community player ranking.
-                                                                                                                                                                                                                                                                                                                                                                                                                    This project is independently created and is not affiliated
-                                                                                                                                                                                                                                                                                                                                                                                                                          with RobTop Games.
-                                                                                                                                                                                                                                                                                                                                                                                                                              </p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                </section>
+  <div class="list-page-header">
+    <button id="backHomeBtn" class="back-btn">
+      ← Home
+    </button>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                </main>
+    <div class="eyebrow">GLOBAL RANKINGS</div>
+    <h1 id="listPageTitle">Player Ranking</h1>
+  </div>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                <footer>
-                                                                                                                                                                                                                                                                                                                                                                                                                                  <span>NOOMICLONE PLAYER LIST</span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                    <span>COMMUNITY PROJECT · 2026</span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                    </footer>
+  <!-- LIST SWITCHER -->
+  <div class="list-tabs">
+    <button id="playerTab" class="list-tab active">
+      Player Ranking
+    </button>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                    <div class="modal" id="modal">
-                                                                                                                                                                                                                                                                                                                                                                                                                                      <div class="modal-content">
-                                                                                                                                                                                                                                                                                                                                                                                                                                          <button id="closeModal" class="close-btn">&times;</button>
-                                                                                                                                                                                                                                                                                                                                                                                                                                              <div id="profileContent"></div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+    <button id="elementsTab" class="list-tab">
+      Elements Ranking
+    </button>
+  </div>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                <script src="./script.js?v=3"></script>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                </body>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                </html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  <!-- PLAYER RANKING -->
+  <section id="playersSection">
+
+    <div class="section-heading">
+      <h2>Leaderboard</h2>
+      <div id="playerTotal"></div>
+    </div>
+
+    <div class="toolbar">
+      <input id="search" type="search"
+        placeholder="Search player..."
+        autocomplete="off">
+
+      <select id="sort">
+        <option value="points">Highest points</option>
+        <option value="name">Alphabetical</option>
+      </select>
+    </div>
+
+    <section id="podium"></section>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>PLAYER</th>
+            <th>POINTS</th>
+            <th>HARDEST</th>
+            <th>RECORDS</th>
+          </tr>
+        </thead>
+
+        <tbody id="playerTable"></tbody>
+      </table>
+    </div>
+
+    <section class="records-section">
+      <h2>Recent Records</h2>
+      <div id="recordsList"></div>
+    </section>
+
+  </section>
+
+  <!-- ELEMENTS RANKING -->
+  <section id="elementsSection" class="hidden">
+
+    <div class="section-heading">
+      <h2>Elements Ranking</h2>
+    </div>
+
+    <div class="toolbar">
+      <input id="elementSearch" type="search"
+        placeholder="Search element..."
+        autocomplete="off">
+
+      <select id="elementSort">
+        <option value="rank">Ranking</option>
+        <option value="name">Alphabetical</option>
+      </select>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>ELEMENT</th>
+            <th>CREATOR</th>
+            <th>POINTS</th>
+            <th>TIER</th>
+          </tr>
+        </thead>
+
+        <tbody id="elementTable"></tbody>
+      </table>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- SIDE MENU -->
+<div id="menuOverlay" class="menu-overlay hidden"></div>
+
+<aside id="sideMenu" class="side-menu">
+
+  <div class="menu-header">
+    <div class="menu-logo">
+      <span class="logo-icon">N</span>
+      <span>GLOBAL NOOMIPLAYER LIST</span>
+    </div>
+
+    <button id="closeMenuBtn" class="close-menu">
+      &times;
+    </button>
+  </div>
+
+  <div class="menu-item menu-dropdown" id="listsToggle">
+    <span>☷ &nbsp; Lists</span>
+    <span class="arrow">⌄</span>
+  </div>
+
+  <div id="listsSubmenu" class="submenu hidden">
+    <button id="menuPlayersBtn">Player Ranking</button>
+    <button id="menuElementsBtn">Elements Ranking</button>
+  </div>
+
+  <div class="menu-item menu-dropdown" id="languagesToggle">
+    <span>文 &nbsp; Languages</span>
+    <span class="arrow">⌄</span>
+  </div>
+
+  <div id="languagesSubmenu" class="submenu hidden">
+    <button id="englishBtn">English</button>
+    <button id="russianBtn">Русский</button>
+  </div>
+
+  <div class="menu-account">
+    <button id="signInBtn" class="sign-in-btn">
+      Sign in
+    </button>
+
+    <button id="signUpBtn" class="sign-up-btn">
+      Sign up
+    </button>
+  </div>
+
+</aside>
+
+<!-- AUTH MODAL -->
+<div id="authModal" class="modal hidden">
+  <div class="modal-content">
+
+    <button id="closeAuthBtn" class="close-btn">
+      &times;
+    </button>
+
+    <div id="authContent"></div>
+
+  </div>
+</div>
+
+<!-- PLAYER PROFILE MODAL -->
+<div id="profileModal" class="modal hidden">
+  <div class="modal-content">
+
+    <button id="closeProfileBtn" class="close-btn">
+      &times;
+    </button>
+
+    <div id="profileContent"></div>
+
+  </div>
+</div>
+
+<footer>
+  <span>GLOBAL NOOMIPLAYER LIST</span>
+  <span>COMMUNITY PROJECT</span>
+</footer>
+
+<script src="./script.js?v=4"></script>
+
+</body>
+</html>                                                                                                              
