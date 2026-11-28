@@ -125,3 +125,17 @@ sort.addEventListener("change", renderTable);
 renderPodium();
 renderTable();
 renderRecords();
+document.getElementById("exploreBtn").addEventListener("click", () => {
+  document.getElementById("homePage").classList.add("hidden");
+  document.getElementById("listPage").classList.remove("hidden");
+
+  document.getElementById("playersSection").classList.remove("hidden");
+  document.getElementById("elementsSection").classList.add("hidden");
+
+  document.getElementById("listPageTitle").textContent = "Player Ranking";
+
+  document.getElementById("playerTab").classList.add("active");
+  document.getElementById("elementsTab").classList.remove("active");
+
+  window.scrollTo(0, 0);
+});
