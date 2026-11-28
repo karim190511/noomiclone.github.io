@@ -1,7 +1,7 @@
 const players = [
-      {name:"Rori", points:11253, hardest:"Tidal Wave", records:47},
-        {name:"Aether", points:9870, hardest:"Silent Clubstep", records:39},
-          {name:"Nova", points:8450, hardest:"Kyouki", records:34},
+      {name:"Сильнейший градусник", points:1000, hardest:"2160", records:1},
+        {name:"Lyuty jNoomimen", points:1000, hardest:"2160", records:1},
+          {name:"Наисильнейший", points:1000, hardest:"2160", records:1},
             {name:"Lumi", points:7900, hardest:"Slaughterhouse", records:31},
               {name:"Zenith", points:7200, hardest:"Acheron", records:28},
                 {name:"Kairo", points:6550, hardest:"Tidal Wave", records:24},
