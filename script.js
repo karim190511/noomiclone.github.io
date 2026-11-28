@@ -1,4 +1,3 @@
-alert("SCRIPT WORKS");
 const players = [
   {name:"Сильнейший градусник", points:1000, hardest:"2160", records:0},
   {name:"Lyuty jNoomimen", points:1000, hardest:"2160", records:0},
